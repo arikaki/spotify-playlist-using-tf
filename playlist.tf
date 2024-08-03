@@ -1,15 +1,15 @@
 resource "spotify_playlist" "project" {
-  name        = "project playlist"
+  name        = "My project playlist"
   description = "My playlist is so awesome"
   public      = false
 
   tracks = [
-    "id2u1FWVxAb16qbgwPgygAdj",
-    "47CK1SBOe7VR65GEmZmPjk"
+    data.spotify_track.overkill.id,
+    data.spotify_track.blackwater.id,
+    data.spotify_track.snowblind.id,
   ]
 }
 
-/*
 data "spotify_track" "overkill" {
   url = "https://open.spotify.com/track/4XdaaDFE881SlIaz31pTAG"
 }
@@ -19,4 +19,3 @@ data "spotify_track" "blackwater" {
 data "spotify_track" "snowblind" {
   url = "https://open.spotify.com/track/7FCG2wIYG1XvGRUMACC2cD"
 }
-*/
